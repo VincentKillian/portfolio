@@ -1585,7 +1585,7 @@ video {
 
 .border-darkseafoam {
     --tw-border-opacity: 1;
-    border-color: rgb(63 135 161/var(--tw-border-opacity))
+    border-color: rgb(107 144 128/var(--tw-border-opacity))
 }
 
 .border-gray-700 {
@@ -1795,7 +1795,7 @@ video {
 
 .text-darkseafoam {
     --tw-text-opacity: 1;
-    color: rgb(63 135 161/var(--tw-text-opacity))
+    color: rgb(107 144 128/var(--tw-text-opacity))
 }
 
 .text-gray-400 {
@@ -1984,7 +1984,7 @@ video {
 
 .hover\:border-darkerseafoam:hover {
     --tw-border-opacity: 1;
-    border-color: rgb(32 119 150/var(--tw-border-opacity))
+    border-color: rgb(107 144 128/var(--tw-border-opacity))
 }
 
 .hover\:border-gray-700:hover {
@@ -2003,7 +2003,7 @@ video {
 
 .hover\:text-darkerseafoam:hover {
     --tw-text-opacity: 1;
-    color: rgb(32 119 150/var(--tw-text-opacity))
+    color: rgb(107 144 128/var(--tw-text-opacity))
 }
 
 .hover\:shadow-art-hover:hover {
@@ -2078,12 +2078,12 @@ video {
 
 .prose-a\:border-darkseafoam :is(:where(a):not(:where([class~=not-prose] *))) {
     --tw-border-opacity: 1;
-    border-color: rgb(63 135 161/var(--tw-border-opacity))
+    border-color: rgb(107 144 128/var(--tw-border-opacity))
 }
 
 .prose-a\:text-darkseafoam :is(:where(a):not(:where([class~=not-prose] *))) {
     --tw-text-opacity: 1;
-    color: rgb(63 135 161/var(--tw-text-opacity))
+    color: rgb(107 144 128/var(--tw-text-opacity))
 }
 
 .prose-a\:no-underline :is(:where(a):not(:where([class~=not-prose] *))) {
