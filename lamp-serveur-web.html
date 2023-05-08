@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Killian Vincent</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+
+<body>
+    <nav class="sticky top-0 z-10 border-b bg-white/80 border-primary backdrop-blur-md">
+        <div
+            class="container flex items-center justify-between w-full px-4 pt-2 pb-2 mx-auto lg:px-0 max-w-screen-lg md:flex-row">
+            <a href="index.html"
+                class="py-1 my-1 mr-0 font-sans text-sm antialiased font-semibold border-b border-gray-700 border-opacity-0 hover:border-opacity-100 md:mr-6 md:inline-block text-secondary">Killian&nbsp;Vincent</a>
+            <div class="flex md:items-center">
+                <div class="space-x-5">
+                    <a href="index.html"
+                        class="text-sm py-1 hover:bg-gray-100 hover:border-b text-darkseafoam hover:text-darkerseafoam hover:border-darkerseafoam">Accueil</a>
+                    <a href="index.html#work"
+                        class="text-sm py-1 hover:bg-gray-100 hover:border-b text-secondary hover:text-primary hover:border-gray-700">Project</a>
+                    <a href="about.html"
+                        class="text-sm py-1 hover:bg-gray-100 hover:border-b text-secondary hover:text-primary hover:border-gray-700">A
+                        propos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="overflow-x-hidden" style="opacity: 1; transform: none;">
+        <div class="container mx-auto max-w-screen-lg">
+            <div class="px-4 lg:px-0">
+                <article class="max-w-3xl mx-auto mb-10 md:mb-20">
+                    <main class="mt-12">
+                        <div class="mb-8 ">
+                            <a class="border-b border-gray-700 text-secondary hover:bg-gray-100"
+                                href="index.html#writing">← Retour</a>
+                        </div>
+                        <h1 class="mb-2 text-3xl font-bold tracking-tight md:mb-6 md:text-6xl leading-headers">LAMP -
+                            Serveur Web</h1>
+                        <span class="block pb-8 mb-8 text-xl border-b-2 border-dotted text-tertiary">Mardi, 01 Fevrier
+                            2023</span>
+                        <div
+                            class="font-serif antialiased prose prose-xl prose-a:no-underline prose-h2:font-bold prose-h2:text-3xl prose-h3:font-semibold prose-h2:font-sans prose-h3:font-sans prose-h3:text-xl prose-h4:text-xl prose-h4:mt-0 prose-a:text-darkseafoam prose-a:border-b prose-a:border-darkseafoam hover:prose-a:bg-gray-100 prose-li:my-1 prose-ul:-my-1 prose-ol:-my-2 leading-8 prose-blockquote:not-italic prose-blockquote:text-2xl prose-blockquote:text-tertiary -tracking-[.005em] max-w-none prose-hr:border-t-2 prose-hr:border-dotted prose-hr:border-b-0 prose-stone">
+                            <p>
+                                Un serveur LAMP est un serveur Web complet qui fonctionne sur une distribution Linux et
+                                comprend les logiciels open-source suivants :
+                                Apache, MySQL et PHP (d'où le nom LAMP). Il est souvent utilisé pour héberger des sites
+                                Web dynamiques et des applications Web.
+                            </p>
+                            <p>
+                                Apache est un serveur Web qui permet de fournir des pages Web aux clients qui les
+                                demandent. Il est capable de gérer de nombreux protocoles,
+                                notamment HTTP, HTTPS, FTP et SMTP.
+                            </p>
+                            <p>
+                                MySQL est un système de gestion de base de données qui permet de stocker et d'organiser
+                                les données pour les applications Web. Il est
+                                particulièrement populaire pour les sites Web qui ont besoin de stocker des informations
+                                utilisateur, telles que les noms d'utilisateurs,
+                                les mots de passe et les données de profil.
+                            </p>
+                            <p>
+                                PHP est un langage de script côté serveur qui permet de créer des applications Web
+                                dynamiques en générant des pages HTML en temps réel.
+                                Il est souvent utilisé pour créer des sites Web avec des fonctionnalités avancées,
+                                telles que des formulaires de saisie de données, des
+                                forums de discussion et des applications de commerce électronique.
+                            </p>
+                            <p>
+                                En utilisant un serveur LAMP, les développeurs Web peuvent créer des sites Web et des
+                                applications dynamiques pour une variété d'utilisateurs,
+                                allant des petites entreprises aux grandes entreprises en passant par les organisations
+                                à but non lucratif. Le serveur LAMP est souvent préféré
+                                pour sa stabilité, sa sécurité et son coût abordable, ainsi que pour sa flexibilité dans
+                                la configuration et la personnalisation.
+                            </p>
+                            <span class="block pb-8 mb-8 border-b-2 border-dotted"></span>
+                            <p>
+                                Pour créer un serveur Linux Apache MySQL PHP (LAMP), vous pouvez suivre les étapes suivantes :
+                            </p>
+
+
+                            <ol>
+                                <li>
+                                    Installer Linux : Tout d'abord, vous devez installer une distribution Linux sur votre machine. Les distributions populaires pour les serveurs comprennent Ubuntu Server, et Debian.
+                                </li>
+                                <li>
+                                    Installer Apache : Apache est un serveur Web open-source populaire. Pour l'installer sur une distribution Ubuntu, vous pouvez exécuter la commande suivante :
+
+                                    <pre style="font-size: 1rem;">sudo apt-get update <br>sudo apt-get install apache2</pre>
+                                </li>
+                                <li>
+                                    Configurer Apache : Une fois que vous avez installé Apache, vous devez le configurer pour répondre aux besoins de votre application Web. Vous pouvez modifier les fichiers de configuration 
+                                    d'Apache dans le répertoire /etc/apache2/ pour Ubuntu
+                                    <br>Par exemple, pour modifier le fichier de configuration pour le site par défaut sur Ubuntu, vous pouvez exécuter la commande suivante :
+                                    <pre style="font-size: 1rem;">sudo nano /etc/apache2/sites-enabled/000-default.conf</pre>
+                                </li>
+                                <li>
+                                    Installer MySQL : MySQL est un système de gestion de base de données populaire. Pour l'installer sur Ubuntu, vous pouvez exécuter la commande suivante :
+                                    <pre style="font-size: 1rem;">sudo apt-get install mysql-server</pre>
+                                </li>
+                                <li>
+                                    Configurer MySQL : Une fois que vous avez installé MySQL, vous devez le configurer pour créer une base de données et un utilisateur pour votre application. Vous pouvez vous connecter à MySQL en tant que root en exécutant la commande suivante :
+                                    <pre style="font-size: 1rem;">sudo mysql -u root -p</pre>
+                                    Et pour créer une base de données et un utilisateur, vous pouvez exécuter les commandes suivantes :
+                                    <pre style="font-size: 1rem;">CREATE DATABASE nom_de_la_base_de_données;<br>CREATE USER 'nom_d'utilisateur'@'localhost' IDENTIFIED BY 'mot_de_passe';<br>GRANT ALL PRIVILEGES ON nom_de_la_base_de_données.* TO 'nom_d'utilisateur'@'localhost';</pre>
+                                    N'oubliez pas de remplacer "nom_de_la_base_de_données", "nom_d'utilisateur" et "mot_de_passe" par les valeurs souhaitées.
+                                </li>
+                                <li>
+                                    Installer PHP : PHP est un langage de script côté serveur populaire pour les applications Web dynamiques. Pour l'installer sur Ubuntu, vous pouvez exécuter la commande suivante :
+                                    <pre style="font-size: 1rem;">sudo apt-get install php libapache2-mod-php php-mysql</pre>
+                                </li>
+                                <li>
+                                    Tester le serveur LAMP : Une fois que vous avez terminé l'installation et la configuration, vous pouvez tester votre serveur LAMP en créant un fichier index.php dans le répertoire /var/www/html/ avec le contenu suivant :
+                                    <pre style="font-size: 1rem;">phpinfo();</pre>
+                                    Vous pouvez accéder à ce fichier en ouvrant votre navigateur et en accédant à l'adresse IP de votre serveur. Si tout fonctionne correctement, vous devriez voir une page d'informations PHP.
+                                </li>
+                            </ol>
+                        </div>
+                    </main>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div
+            class="container flex flex-wrap items-baseline justify-between px-4 pt-6 pb-12 mx-auto border-t-2 border-dotted space-y-3 md:space-y-0 md:flex-nowrap lg:px-0 max-w-screen-lg">
+            <ul class="flex items-center text-sm text-secondary space-x-3">
+                <li>© 2023</li>
+                <li class="hidden text-gray-400 md:inline-block">•</li>
+                <li class="hidden md:inline-block">Fait en HTML&CSS</li>
+            </ul>
+            <div class="flex items-center space-x-4">
+                <a href="https://www.linkedin.com/killianvincent21032003" target="_blank" rel="noreferrer"
+                    class="flex items-center mt-1 text-sm border-b border-gray-700 text-secondary hover:text-primary hover:border-b hover:bg-gray-100">
+                    <span class="mr-1">LinkedIn</span>
+                    <span class="mb-1 leading-snug">↗</span>
+                </a>
+                <a href="https://github.com/vincentkillian" target="_blank" rel="noreferrer"
+                    class="flex items-center mt-1 text-sm border-b border-gray-700 text-secondary hover:text-primary hover:border-b hover:bg-gray-100">
+                    <span class="mr-1">GitHub</span>
+                    <span class="mb-1 leading-snug">↗</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

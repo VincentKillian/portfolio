@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Killian Vincent</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body>
+    <nav class="sticky top-0 z-10 border-b bg-white/80 border-primary backdrop-blur-md">
+        <div class="container flex items-center justify-between w-full px-4 pt-2 pb-2 mx-auto lg:px-0 max-w-screen-lg md:flex-row">
+            <a href="index.html" class="py-1 my-1 mr-0 font-sans text-sm antialiased font-semibold border-b border-gray-700 border-opacity-0 hover:border-opacity-100 md:mr-6 md:inline-block text-secondary">Killian&nbsp;Vincent</a>
+            <div class="flex md:items-center">
+                <div class="space-x-5">
+                    <a href="index.html" class="text-sm py-1 hover:bg-gray-100 hover:border-b text-darkseafoam hover:text-darkerseafoam hover:border-darkerseafoam">Accueil</a>
+                    <a href="index.html#work" class="text-sm py-1 hover:bg-gray-100 hover:border-b text-secondary hover:text-primary hover:border-gray-700">Project</a>
+                    <a href="about.html" class="text-sm py-1 hover:bg-gray-100 hover:border-b text-secondary hover:text-primary hover:border-gray-700">A propos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="overflow-x-hidden" style="opacity: 1; transform: none;">
+        <div class="container mx-auto max-w-screen-lg">
+            <div class="px-4 lg:px-0">
+                <article class="max-w-3xl mx-auto mb-10 md:mb-20">
+                    <main class="mt-12">
+                        <div class="mb-8 ">
+                            <a class="border-b border-gray-700 text-secondary hover:bg-gray-100" href="index.html#writing">← Retour</a>
+                        </div>
+                        <h1 class="mb-2 text-3xl font-bold tracking-tight md:mb-6 md:text-6xl leading-headers">Maitriser les bases de Git/GitHub</h1>
+                        <span class="block pb-8 mb-8 text-xl border-b-2 border-dotted text-tertiary">Mercredi, 01 Fevrier 2023</span>
+                        <div class="font-serif antialiased prose prose-xl prose-a:no-underline prose-h2:font-bold prose-h2:text-3xl prose-h3:font-semibold prose-h2:font-sans prose-h3:font-sans prose-h3:text-xl prose-h4:text-xl prose-h4:mt-0 prose-a:text-darkseafoam prose-a:border-b prose-a:border-darkseafoam hover:prose-a:bg-gray-100 prose-li:my-1 prose-ul:-my-1 prose-ol:-my-2 leading-8 prose-blockquote:not-italic prose-blockquote:text-2xl prose-blockquote:text-tertiary -tracking-[.005em] max-w-none prose-hr:border-t-2 prose-hr:border-dotted prose-hr:border-b-0 prose-stone">
+                            <p>
+                                <strong>Ton project est en panne !</strong> Que se passe-t-il cette fois-ci ? Les scénarios de test que tu as écrits couvraient tous les cas d'utilisation que tu 
+                                pouvais imaginer - et ils y sont tous passé après que tu es mis à jour ton pc hier. <em>Si seulement on pouvais revenir en arrière et 
+                                examiner toutes les modifications récentes du code pour voir ce qui n'a pas fonctionné !</em> C'est le type de problème que <strong>Git</strong> doit résoudre.. 
+                            </p>
+                            <p>
+                                Dans cet article, je vais te montrer comment utiliser <strong>Git</strong> pour suivre l'historique des fichiers de ton projet afin que tu puisses identifier les bogues 
+                                chaque fois qu'ils apparaissent dans ton projet.
+                            </p>
+                            <h3>Quelle est la différence entre Git et GitHub ?</h3>
+                            <p>
+                                <strong>GitHub</strong> est une application web qui permet aux utilisateurs d'héberger des fichiers, un peu comme DropBox ou Google Drive, mais elle est conçue pour héberger des <strong>dépôts</strong>.<br>
+                                <strong>Git</strong> est un outil en ligne de commande utilisé principalement par les programmeurs pour gérer les versions <em>(l'historique)</em> des projets logiciels. Chaque projet vit 
+                                dans un <strong>dépôt Git</strong> qui conserve l'historique de toutes les modifications.
+                            </p>
+                            <span class="block pb-8 mb-8 border-b-2 border-dotted"></span>
+                            <h3>1. Installation de Git.</h3>
+                            <p>
+                                En cliquant <a href="https://git-scm.com/downloads" target="_blank">ici</a>, tu peux installer <strong>Git</strong> en cliquant sur le système d'exploitation que tu souhaite utilisez. Après avoir installé <strong>Git</strong>, 
+                                vas dans ton <em>invite de commande</em> si tu es sous Windows ou dans le <em>terminal</em> si tu es sous MacOS ou Linux. Tape <code>git</code> et appuis sur la touche Entrée. 
+                                Si tu vois des informations sur Git, C'est installé correctement ! Si tu obtiens <code>command not found</code> - essaye de désinstaller et de réinstaller git, ou
+                                de reconfigurer les variables d'environnement. 
+                            </p>
+                            <span class="block pb-8 mb-8 border-b-2 border-dotted"></span>
+                            <h3>2. Créer un compte GitHub</h3>
+                            <p>
+                                En cliquant <a href="https://github.com/" target="_blank">ici</a>, ça te mènera à GitHub. De là, tu peux créer un compte en utilisant ton adresse e-mail.
+                            </p>
+                            <span class="block pb-8 mb-8 border-b-2 border-dotted"></span>
+                            <h3>3. Créer votre premier référentiel</h3>
+                            <p>
+                                Sur n'importe quelle page de GitHub, lorsque tu es connecté, tu verras un signe plus blanc à côté de ton image de profil dans la barre d'outils en haut à droite.
+                                En cliquant sur le signe plus, tu verras apparaître un menu déroulant dans lequel tu pourras sélectionner : <code>Nouveau répertoire</code>. À partir de là, tu dois nommer 
+                                le dépôt de quelque chose comme <code>Maitrise-les-bases-sur-les-G</code> - en tenant compte du fait qu'il ne te permet pas d'utiliser des espaces dans le nom. Tu 
+                                n'as pas besoin d'ajouter une description et tu peux laisser l'accès par défaut <code>Public</code> activé.<br>
+                                Pour cette 'leçon', tu ne dois pas cocher la case <code>Initialiser avec le fichier Readme</code>, et enfin tu n'as pas besoin d'ajouter un fichier .gitignore ou une 
+                                licence - tu peux donc cliquer sur le bouton <code>Créer un dépôt</code>.
+                            </p>
+                            <p>
+                                La page suivante contiendra beaucoup de petits textes un peu intimidants. La seule information dont tu dois te préoccuper sur cette page est la case bleue en haut de la 
+                                page, intitulée <code>Configuration rapide</code>. Dans la case bleue <code>Configuration rapide</code>, assure-toi que <code>HTTPS</code> est sélectionné et non <code>SSH</code>. 
+                                À l'extrême gauche du menu, il y a une icône de presse-papiers que tu peux sélectionner pour copier l'adresse URL dont tu as besoin pour <strong>cloner</strong> ton dépôt sur ton pc.
+                            </p>
+                            <p>
+                                Dans ton terminal ou git bash, vas dans le répertoire dans lequel tu souhaite placer ton dépôt en utilisant la commande <code>cd nom_répertoire</code>. 
+                                Exécute ensuite la commande suivante (<em>remplace mon URL par l'URL que tu as copiée de GitHub</em>) :
+                            </p>
+                            <pre style="font-size: 1rem;">git clone https://github.com/VincentKillian/master-the-basics-of-git-github.git</pre>
+
+                            <div class="text-center">
+                                <img src="images/master-basics-git/mbgg1.PNG" alt="" class="mb-0">
+                                <span class="text-sm text-tertiary">Clonage du référentiel et ensuite changement de répertoire dans le référentiel</span>
+                            </div><!--Image avec Clonage du référentiel et ensuite changement de répertoire dans le référentiel (Image par l'auteur)-->
+
+                            <p>
+                                L'exécution de cette commande doit créer un dossier vide dans le répertoire à partir duquel tu as exécuté la commande. Tu peux considérer le 
+                                clonage du repertoire comme son téléchargement, mais en plus grand. Il télécharge également l'historique de toutes les modifications apportées à ces fichiers. 
+                                Exécute ensuite la commande <code>cd Master_Git_And_GitHub_Basics_Article</code> dans ton invite de commande ou terminal pour aller dans ton nouveau dépôt que tu viens de <strong>cloner</strong>. 
+                                Maintenant que tu es dans celui-ci, tu dois pouvoir obtenir le statut de ton repertoire en utilisant la commande :
+                            </p>
+                            <pre style="font-size: 1rem;">git status</pre>
+                            <p>
+                                La commande <strong>git status</strong> te montrera toutes les modifications que tu as apportées à ton dépôt depuis ton dernier commit. Elle dira :
+                            </p>
+
+                            <div class="text-center">
+                                <img src="images/master-basics-git/mbgg2.PNG" alt="" class="mb-0">
+                                <span class="text-sm text-tertiary">Vérification de l'état de notre dépôt en utilisant "git status"</span>
+                            </div>
+
+                            <!--Image avec Vérification de l'état de notre dépôt en utilisant "git status" (Image de l'auteur)
+                            NOTE : Si votre Bash/Terminal/Command Prompt Git n'affiche pas le même schéma de couleurs et le message vert "(main #)" - ne vous inquiétez pas. Mon profil Git Bash est configuré pour me donner ces couleurs et messages supplémentaires.
+                            -->
+                            <p>
+                                Tout ce que cela nous dit, c'est que tu n'as pas encore d'historique parce que n'as pas encore de <strong>commits</strong>. Tu peux te demander ce 
+                                que signifie <code>On branch main</code> - mais je vais aborder ce sujet dans le prochain article. Maintenant, tu vas ajouter de l'historique.
+                            </p>
+                            <span class="block pb-8 mb-8 border-b-2 border-dotted"></span>
+                            <h3>4. Créer notre premier commit</h3>
+                            <p>
+                                Dans un <strong>dépôt Git</strong>, on enregistre l'historique en <strong>commits</strong>. Comme on l'a vu dans la sortie <strong>git status</strong>, tu n'avais actuellement aucun 
+                                commit. Afin de créer ton premier commit, tu dois faire quelques changements dans ton dépôt. Crée un nouveau fichier dans ton explorateur de 
+                                fichiers ou dans la fenêtre de ton finder et fais-le glisser dans le répertoire de ton dépôt. Le fichier sera simplement <code>file.txt</code> sans 
+                                contenu. Maintenant, si tu retourne à ton invite de commande ou à ton terminal et que tu le lance <code>git status</code>, tu verras ton nouveau fichier :
+                            </p>
+
+                            <div class="text-center">
+                                <img src="images/master-basics-git/mbgg3.PNG" alt="" class="mb-0">
+                                <span class="text-sm text-tertiary">Utilisation de la commande "touch" pour créer un fichier et exécution de "git status" pour voir les modifications apportées au dépôt</span>
+                            </div>
+                            <!--Utilisation de la commande "touch" pour créer un fichier et exécution de "git status" pour voir les modifications apportées au dépôt (Image d'auteur)-->
+                            <p>
+                                Maintenant tu peux voir à quel point <strong>git status</strong> est utile pour nous montrer tes changements. Tu remarqueras que le fichier <strong>file.txt</strong> est listé dans les 
+                                fichiers non suivis. Rappele-toi que <strong>Git</strong> veut suivre tous les changements qui se produisent dans le dépôt - mais tu dois lui dire quels fichiers suivre. 
+                                Pour rendre cela apparent, ajoute un second fichier appelé <strong>file2.txt</strong> afin de voir ce qui se passe lorsque tu suis un fichier mais pas l'autre. Après avoir 
+                                ajouté un second fichier au dépôt et vérifié qu'il apparaît comme non suivi lorsque tu execute <code>git status</code>, tu vas apprendre ta prochaine commande <strong>Git</strong> :
+                            </p>
+                            <pre style="font-size: 1rem;">git add file.txt</pre>
+                            <p>
+                                Tu selectionneras les fichiers à suivre en utilisant <code>git add nom_fichier</code>. Notez que tu n'as sélectionné que le premier fichier. Maintenant, lorsque tu 
+                                exécute git status, tu obtiens la sortie :
+                            </p>
+                            <div class="text-center">
+                                <img src="images/master-basics-git/mbgg4.PNG" alt="" class="mb-0">
+                                <span class="text-sm text-tertiary">Créer file2.txt, ajouter file.txt pour qu'il soit prêt à commiter, et vérifier le statut du dépôt</span>
+                            </div>
+                            <!--Créer file2.txt, ajouter file.txt pour qu'il soit prêt à commiter, et vérifier le statut du dépôt (Image par l'auteur)-->
+                            <p>
+                                Remarque-tu que <strong>file.txt</strong> est listé sous un nouvel en-tête : <code>Changes to be committed</code> et que <strong>file2.txt</strong> est toujours listé sous <code>Untracked</code>. Garde à l'esprit que 
+                                tu n'as pas suivi quoi que ce soit en ajoutant le fichier -  tu viens de sélectionner le fichier à suivre lors de la <strong>validation</strong> . Maintenant que tu as sélectionné les changements 
+                                que tu as ajouter à notre commit, tu peux créer ton premier commit dans ton projet en utilisant :
+                            </p>
+                            <pre style="font-size: 1rem;">git commit -m "add file.txt"</pre>
+                            <div class="text-center">
+                                <img src="images/master-basics-git/mbgg5.PNG" alt="" class="mb-0">
+                                <span class="text-sm text-tertiary">Validation du fichier.txt que nous avons ajouté à l'étape précédente</span>
+                            </div>
+                            <!--Validation du fichier.txt que nous avons ajouté à l'étape précédente (Image de l'auteur)-->
+                            <p>
+                                Cela t'indique que tu as ajouté un nouveau commit qui est le <code>root-commit</code> puisque c'est le premier. Les futurs commits ne seront pas des 
+                                <code>root commits</code>. Ton commit a le message <code>add file.txt</code>, et il n'inclut qu'un seul changement de fichier où tu as créé le <code>file.txt</code>. 
+                                Enfin, tu apprendra une autre commande qui répertoriera tous les commits de ton repertoire par ordre décroissant :
+                            </p>
+                            <pre style="font-size: 1rem;">git log</pre>
+                            <p>
+                                Cette commande affiche :
+                            </p>
+                            <div class="text-center">
+                                <img src="images/master-basics-git/mbgg6.PNG" alt="" class="mb-0">
+                                <span class="text-sm text-tertiary">Utilisation de git log pour voir tous nos commits précédents</span>
+                            </div>
+                            <!--Utilisation de git log pour voir tous nos commits précédents (Image de l'auteur)-->
+                            <p>
+                                Un seul commit est répertorié puisque tu n'en n'as qu'un et il nous indique également l'auteur, la date et le message pour chaque commit.
+                            </p>
+                            <span class="block pb-8 mb-8 border-b-2 border-dotted"></span>
+                            <h3>5. Pousser vos modifications</h3>
+                            <p>
+                                Une fois que tu as validé tes modifications, personne ne pourra les voir sur ton profil GitHub tant que tu n'auras pas envoyé 
+                                ton code avec la commande :
+                            </p>
+                            <pre style="font-size: 1rem;">git push</pre>
+                            <div class="text-center">
+                                <img src="images/master-basics-git/mbgg7.PNG" alt="" class="mb-0">
+                                <span class="text-sm text-tertiary">Pousser vos modifications de votre machine locale vers votre référentiel GitHub</span>
+                            </div>
+                            <!--Pousser vos modifications de votre machine locale vers votre référentiel GitHub (Image de l'auteur)-->
+                            <p>
+                                Tes modifications ont maintenant été téléchargées sur ton GitHub pour que tout le monde puisse les voir. Vas vérifier !
+                            </p>
+                            <div class="text-center">
+                                <img src="images/master-basics-git/mbgg8.PNG" alt="" class="mb-0">
+                                <span class="text-sm text-tertiary">Voir le fichier file.txt que nous avons poussé de notre référentiel local vers notre référentiel en ligne GitHub</span>
+                            </div>
+                            <!--Voir le fichier file.txt que nous avons poussé de notre référentiel local vers notre référentiel en ligne GitHub (Image de l'auteur)-->
+                            <p>
+                                Remarques-tu que <strong>file2.txt</strong> n'est pas là puisque tu ne l'as pas sélectionné pour être commité. Tu peux cliquer sur
+                                <code>1 commit</code> à l'extrême gauche de la barre d'outils au milieu de l'écran pour voir tous les commits un peu comme la façon dont <strong>git log</strong> te le montre.
+                            </p>
+                            <span class="block pb-8 mb-8 border-b-2 border-dotted"></span>
+                            <h3>6. Et maintenant ?</h3>
+                            <p>
+                                Tu sais maintenant comment utiliser les commandes git : <strong>clone , status , add , commit , log et push</strong> . Tu peux maintenant continuer à mettre 
+                                à jour tes repertoire avec de nouvelles modifications. <strong>git ajoutez</strong> les fichiers que tu modifie pour les sélectionner à <strong>valider</strong> . Ensuite, 
+                                <strong>engage</strong>-les avec un message décrivant ce que tu as fait et <strong>pousse</strong>- les vers GitHub pour que les autres puissent les voir. 
+                                Pour le prochain tutoriel, On apprendras tout sur l'utilisation des branches git pour collaborer avec d'autres développeurs sur des projets logiciels.
+
+
+                        </div>
+                    </main>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container flex flex-wrap items-baseline justify-between px-4 pt-6 pb-12 mx-auto border-t-2 border-dotted space-y-3 md:space-y-0 md:flex-nowrap lg:px-0 max-w-screen-lg">
+            <ul class="flex items-center text-sm text-secondary space-x-3">
+                <li>© 2023</li>
+                <li class="hidden text-gray-400 md:inline-block">•</li>
+                <li class="hidden md:inline-block">Fait en HTML&CSS</li>
+            </ul>
+            <div class="flex items-center space-x-4">
+                <a href="https://www.linkedin.com/killianvincent21032003" target="_blank" rel="noreferrer" class="flex items-center mt-1 text-sm border-b border-gray-700 text-secondary hover:text-primary hover:border-b hover:bg-gray-100">
+                    <span class="mr-1">LinkedIn</span>
+                    <span class="mb-1 leading-snug">↗</span>
+                </a>
+                <a href="https://github.com/vincentkillian" target="_blank" rel="noreferrer" class="flex items-center mt-1 text-sm border-b border-gray-700 text-secondary hover:text-primary hover:border-b hover:bg-gray-100">
+                    <span class="mr-1">GitHub</span>
+                    <span class="mb-1 leading-snug">↗</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
